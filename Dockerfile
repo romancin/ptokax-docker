@@ -5,7 +5,7 @@ RUN apt-get update
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y g++ make liblua5.1-0-dev zlib1g-dev wget
 
-RUN wget -O /opt/0.5.0.1-nix-src.tgz http://www.PtokaX.org/files/0.5.0.1-nix-src.tgz
+RUN wget -O /opt/0.5.0.1-nix-src.tgz http://www.ptokax.org/files/0.5.2.2-nix-src.tgz
 RUN (cd /opt && tar zxvf 0.5.0.1-nix-src.tgz)
 RUN (cd /opt/PtokaX/skein && make)
 RUN (cd /opt/PtokaX/tinyxml && make)
