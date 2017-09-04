@@ -3,7 +3,7 @@ FROM stackbrew/ubuntu:12.04
 RUN (echo "deb http://archive.ubuntu.com/ubuntu/ precise main restricted universe multiverse" > /etc/apt/sources.list && echo "deb http://archive.ubuntu.com/ubuntu/ precise-updates main restricted universe multiverse" >> /etc/apt/sources.list && echo "deb http://archive.ubuntu.com/ubuntu/ precise-backports main restricted universe multiverse" >> /etc/apt/sources.list && echo "deb http://archive.ubuntu.com/ubuntu/ precise-security main restricted universe multiverse" >> /etc/apt/sources.list)
 RUN apt-get update
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y g++ make liblua5.1-0-dev zlib1g-dev wget tinyxml
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y g++ make liblua5.1-0-dev zlib1g-dev wget tinyxml2
 
 RUN wget -O /opt/0.5.0.1-nix-src.tgz http://www.ptokax.org/files/0.5.2.2-nix-src.tgz
 RUN (cd /opt && tar zxvf 0.5.0.1-nix-src.tgz)
