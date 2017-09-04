@@ -9,7 +9,7 @@ RUN wget -O /opt/0.5.2.2-nix-src.tgz http://www.ptokax.org/files/0.5.2.2-nix-src
 RUN (cd /opt && tar zxvf 0.5.2.2-nix-src.tgz)
 RUN (cd /opt/PtokaX/skein && make)
 RUN (cd /opt/PtokaX/tinyxml && make)
-RUN (cd /opt/PtokaX && make)
+RUN (cd /opt/PtokaX && make lua51)
 
 ADD run.sh /usr/local/bin/run
 
